@@ -1,0 +1,17 @@
+language: node_js
+install:
+  - echo 'begining installation'
+script:
+  - npm start
+after_success:
+  - echo 'application was run successfully'
+after_failure:
+  - echo 'thers are some errors in the application'
+
+deploy:
+  provider: surge
+  domain: travis-example-ammach.surge.sh
+  on:
+    branch: master
+after_deploy:
+  - echo 'deploying to surge is finished'
