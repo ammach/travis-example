@@ -10,7 +10,7 @@ after_failure:
 
 deploy:
   provider: surge
-  domain: ammach.surge.sh
+  domain: travis-example-ammach.surge.sh
   on:
     branch: master
 after_deploy:
